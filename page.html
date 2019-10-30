@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Page</title>
+</head>
+<body>
+	<button id="clickMeButton">Click me</button>
+	<div id="pDiv">
+	</div>
+</body>
+<script>
+	var button = document.getElementById('clickMeButton');
+	button.onclick = function onClickMeButton() {
+		var node = document.createElement('p');
+		var textNode = document.createTextNode('Button is clicked');
+		node.appendChild(textNode);
+		var parentNode = document.getElementById('pDiv');
+		parentNode.appendChild(node);
+	}
+</script>
+</html>
